@@ -1,0 +1,511 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body { 
+    background-image: url('../src/Fondo.webp');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.encabezado{
+    display: flex;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.encabezado img{
+    transition: 0.4s ease-in-out;
+}
+
+.encabezado img:hover{
+    filter: drop-shadow(0px 0px 10px #d4af37);
+    transform: scale(0.9);
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.menu a:hover {
+    color: #ffcc00;
+}
+
+.btncontactos {
+    background-color: #ffcc00;
+    color: black;
+    padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.4s ease;
+    border-radius: 5px;
+}
+
+.btncontactos:hover {
+    background-color: #ff9900;
+}
+
+.carousel-inner img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.ayestaras{
+    padding-bottom: 3px;
+}
+
+.ayestaran:hover{
+    border-bottom: 5px solid;
+    border-image: linear-gradient(to right, #fff, #2c3948)1;
+}
+
+.carousel-inner img{
+    height: 85vh;
+}
+
+.contenedor{
+    overflow: hidden;
+    max-width: 1100px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.favoritos{
+    width: 200px;
+    margin: 20px auto;
+    padding: 15px;
+    text-align: center;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    border: 2px solid #D4AF37;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+.tarjetas{
+    background: rgba(20,20,20,0.9);
+    border: 2px solid #D4AF37;
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    position: relative;
+    min-height: 350px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px #326dac;
+    padding: 15px;
+    transition: 0.3s ease-in-out;
+    justify-content: space-between;
+}
+
+.tarjetas:hover{
+    box-shadow: 0px 0px 20px #d4af37, 0 0 10px #ff9900;
+}
+
+.tarjetas h1{
+    text-align: center;
+    font-size: 30px;
+    color: #2c3947;
+}
+
+.tarjetas h2{
+    color: #D4AF37;
+    font-size: 22px;
+}
+
+.tarjetas h3{
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px;
+    background: #2c3947;
+    color: white;
+    border-radius: 5px;
+    width: 150px;
+    text-align: center;
+}
+
+.tarjetas p{
+    font-size: 20px;
+    line-height: 25px;
+    color: black;
+
+}
+
+.tarjetas img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.tarjetas:hover{
+    transform: scale(1.05);
+}
+
+.btnfav{
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #D4AF37;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btnfav:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #D4AF37;
+}
+
+.contenedor_form{
+    background: rgba(0,0,0,0.7);
+    color: white;
+    margin: 50px auto;
+    width: 400px;
+    height: 100px;
+    box-shadow: 2px 5px 5px black;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.contenedor_form input{
+border-radius: 10px;
+height: 35px;
+}
+
+.contenedor_form button{
+    height: 40px;
+    width: 85px;
+    border-radius: 15px;
+    background-color: #2c3947;
+    color:whitesmoke;
+    transition: 0.5s ease-in-out;
+}
+
+.contenedor_form button:hover{
+    background: linear-gradient(to right, #f1f1f1, #2c3947);
+    transform: scale(1.1);
+    box-shadow: 1px 1px 3px black;
+}
+
+footer{
+    background-color: #2c3947;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.info {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.info img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.info p{
+    line-height: 25px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.redes{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.redes img{
+    width: 50px;
+    height: 50px;
+}
+
+@media (max-width:760px){
+
+    .encabezado{
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .menu{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .carousel-inner img{
+        height: 40vh;
+    }
+
+    .contenedor_form{
+        width: 90%;
+    }
+
+    footer{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info,
+    .redes{
+        width: 100%;
+        justify-content: center;
+    }
+    .galeria-grid{
+        grid-template-columns: 1fr;
+    }
+    .grande,
+    .ancho{
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+ .historia{
+        flex-direction: column;
+    }
+
+    .texto-historia,
+    .imagen-historia{
+        width: 100%;
+    }
+    .texto-historia h1{
+        font-size: 40px;
+    }
+      .contacto-container{
+
+        flex-direction: column;
+    }
+    .formulario-contacto,
+    .mapa{
+        width: 100%;
+    }
+
+    .mapa{
+        height: 400px;
+    }
+}
+
+.titulo-galeria{
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+}
+
+.titulo-galeria h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: #D4AF37;
+    text-shadow: 0 0 10px black;
+}
+
+.titulo-galeria p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    letter-spacing: 5px;
+}
+
+.galeria-grid{
+    width: 90%;
+    max-width: 1400px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.item-grid{
+    overflow: hidden;
+    border-radius: 15px;
+    border: 2px solid #D4AF37;
+    position: relative;
+    transition: 0.4s ease-in-out;
+}
+
+.item-grid img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+.item-grid:hover img{
+    transform: scale(1.1);
+    filter:
+    brightness(1.2)
+    drop-shadow(0 0 10px #D4AF37);
+}
+
+.item-grid:hover{
+    box-shadow: 0 0 20px #D4AF37;
+}
+
+.grande{
+    grid-row: span 2;
+}
+
+.ancho{
+    grid-column: span 2;
+}
+
+.bajo-stock{
+    color: red;
+    font-weight: bold;
+}
+
+.nosotros-contenedor{
+    width: 90%;
+    max-width: 1400px;
+    margin: 80px auto;
+}
+
+.historia{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    background: rgba(0,0,0,0.8);
+    border: 2px solid #D4AF37;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 0 20px black;
+}
+
+.texto-historia{
+    width: 50%;
+    color: white;
+}
+
+.texto-historia h1{
+    font-size: 60px;
+    color: #D4AF37;
+    margin-bottom: 20px;
+}
+
+.texto-historia h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #ffcc00;
+}
+
+.texto-historia p{
+    line-height: 32px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.imagen-historia{
+    width: 50%;
+}
+
+.imagen-historia img{
+    width: 100%;
+    border-radius: 20px;
+    border: 3px solid #D4AF37;
+    transition: 0.5s ease;
+}
+
+.imagen-historia img:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 20px #D4AF37;
+}
+
+.contacto-main{
+    width: 90%;
+    max-width: 1400px;
+    margin: 80px auto;
+}
+
+.contacto-container{
+    display: flex;
+    gap: 40px;
+    background: rgba(0,0,0,0.8);
+    border: 2px solid #D4AF37;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px black;
+}
+
+.formulario-contacto{
+    width: 50%;
+    padding: 40px;
+    color: white;
+}
+
+.formulario-contacto h1{
+    color: #D4AF37;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.formulario-contacto p{
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.formulario-contacto form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea{
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #1F1F1F;
+    color: white;
+    outline: none;
+    border: 1px solid #D4AF37;
+}
+
+.formulario-contacto textarea{
+    resize: none;
+    height: 150px;
+}
+
+.formulario-contacto button{
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #D4AF37;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.formulario-contacto button:hover{
+    background: #ffcc00;
+    transform: scale(1.03);
+    box-shadow: 0 0 15px #D4AF37;
+}
+
+.mapa{
+    width: 50%;
+    min-height: 600px;
+}
+
